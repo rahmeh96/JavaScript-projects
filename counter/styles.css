@@ -1,0 +1,30 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(65, 59, 59);
+    background-color: rgb(226, 220, 220);
+    
+    }
+    main {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+
+        
+    }
+    .show-counter{
+        font-size: 40px;
+    }
+
+    button{
+        padding: 3px 6px;
+        border: 2px solid black;
+        border-radius: 8px;
+        margin-right: 2px;
+        background-color: rgb(226, 220, 220);
+
+    }
