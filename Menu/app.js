@@ -74,14 +74,11 @@ const menu = [
   ];
    
   const main =  document.querySelector('.menu-items');
-  const allMenu = document.querySelector('.All-menu');
-  const breakfast = document.querySelector('.Breakfast');
-  const lunch = document.querySelector('.lunch');
-  const shakes = document.querySelector('.Shakes');
+  const btns = document.querySelectorAll('.filter-btn');
 
 
 
-  allMenu.addEventListener('click', function(){
+  /*allMenu.addEventListener('click', function(){
     main.innerHTML = '';
 
     menu.forEach((item)=> {
@@ -91,8 +88,8 @@ const menu = [
       <img src="images/item-${item.id}.jpeg">
       <div class="flexing">
       <div class="title-price">
-      <p>${item.title}</p>
-      <p>${item.price}</p>
+      <p class="title">${item.title}</p>
+      <p class="price">${item.price}</p>
       </div>
       <p>${item.desc}</p>
       </div>
@@ -111,8 +108,8 @@ breakfast.addEventListener('click', function(){
     <img src="images/item-${item.id}.jpeg">
     <div class="flexing">
     <div class="title-price">
-    <p>${item.title}</p>
-    <p>${item.price}</p>
+    <p class="title">${item.title}</p>
+    <p class="price">${item.price}</p>
     </div>
     <p>${item.desc}</p>
     </div>
@@ -134,8 +131,8 @@ lunch.addEventListener('click', function(){
     <img src="images/item-${item.id}.jpeg">
     <div class="flexing">
     <div class="title-price">
-    <p>${item.title}</p>
-    <p>${item.price}</p>
+    <p class="title">${item.title}</p>
+    <p class="price">${item.price}</p>
     </div>
     <p>${item.desc}</p>
     </div>
@@ -157,8 +154,8 @@ shakes.addEventListener('click', function(){
     <img src="images/item-${item.id}.jpeg">
     <div class="flexing">
     <div class="title-price">
-    <p>${item.title}</p>
-    <p>${item.price}</p>
+    <p class="title">${item.title}</p>
+    <p class="price">${item.price}</p>
     </div>
     <p>${item.desc}</p>
     </div>
@@ -169,3 +166,52 @@ shakes.addEventListener('click', function(){
   })
 }
 )
+*/
+document.addEventListener('DOMContentLoaded', function(){
+   showMenu(menu);
+  
+})
+
+function showMenu (menuItems){
+  main.innerHTML = '';
+    let displayMenu = menuItems.map((item)=> {
+      
+      return main.innerHTML +=`
+      <article class="article">
+      <img src="images/item-${item.id}.jpeg">
+      <div class="flexing">
+      <div class="title-price">
+      <p class="title">${item.title}</p>
+      <p class="price">${item.price}</p>
+      </div>
+      <p>${item.desc}</p>
+      </div>
+      
+      </article>`
+      
+    })
+    //you can use join as well where you type displayMenu = displayMenu.join('');
+      //main.innerHTML= displayMenu; 
+}
+
+btns.forEach((btn) =>{
+  btn.addEventListener('click', function(e){
+const category= e.currentTarget.dataset.id;
+const newMenu = menu.filter((menuItem)=>{
+  if (menuItem.category === category){
+    return menuItem;
+  }
+})
+
+if(category === 'all' ){
+  showMenu(menu);
+}
+
+else {
+showMenu(newMenu);
+}
+})
+  })
+
+  
+    
