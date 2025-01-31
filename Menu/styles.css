@@ -1,0 +1,83 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(229, 242, 253);
+    color: rgb(102, 59, 19);
+    font-size: 15px;
+}
+
+nav{
+    
+    justify-items: center;
+    margin-bottom: 40px;
+    
+}
+nav button{
+    background-color: transparent;
+    border: 2px solid rgb(247, 199, 110);
+    padding: 3px 8px;
+    margin-right: 4px;
+    border-radius: 8px;
+}
+h1{
+    position: relative;
+}
+h1::after {
+    content: ''; /* No text content */
+    position: absolute;
+    bottom: -4px; /* Position it at the bottom */
+    left: 0;
+    width: 50%; /* Adjust the width for a short underline */
+    height: 2px; /* Thickness of the underline */
+    margin-top: 2px;
+    background-color: rgb(5, 43, 65); /* Color of the underline */
+    transform: translateX(50%); /* Center the underline */}
+
+.menu-items{
+    
+    display: grid;
+    grid-template-columns: repeat(2, 600px);
+    gap: 20px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    
+}
+img {
+    width: 30%;
+    height: 120px;
+    border: 2px solid rgb(245, 197, 107);
+    border-radius: 4px;
+    margin: 10px;
+    padding: 0;
+}
+
+.flexing{
+    margin: 0;
+    padding-bottom: 10;
+    padding-top: 0;
+    justify-content: flex-start;
+    width: 60%;
+    align-content: flex-start;
+}
+.article {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 500px;    
+    gap: 10px;
+    margin: 0;
+    padding: 0;  /* Remove any padding on the container */  /* Ensure no margin on the container */
+    border: 0;
+    
+}
+
+
+.title-price{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    border-bottom: 1px solid rgb(214, 215, 216);
+   
+    
+}
