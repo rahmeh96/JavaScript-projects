@@ -1,0 +1,227 @@
+body{
+    /*background-position: center;  Keeps the image centered */
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: scroll;
+}
+
+
+    /*position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(69, 92, 63, 0.5); /* Red with 50% transparency */
+    /*z-index: 1;  Make sure it's on top of the background 
+    height: 100vh;*/
+    .overlay {
+        content: "";
+        background-size: cover; /* Ensures the image covers the body */
+        background:
+        linear-gradient(rgba(69, 92, 63, 0.5), rgba(69, 92, 63, 0.5)), /* Transparent color */
+        url('thumbnails/hero-bcg.jpeg');
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2; /* Ensures the overlay is on top of the background */
+        height: 100vh;
+
+        
+
+
+      }
+    
+
+
+.icon{
+    height: 80px;
+    width: 80px;
+}
+.nav-container{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 120px;
+    z-index: 2;
+}
+    
+    
+    
+
+.nav-links{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+    
+
+    .heading{
+        position: absolute;  
+        display: flex;
+       flex-direction: column;
+       align-items: center; /* Center them horizontally */
+       justify-content: center; 
+          width: 400px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 3;
+
+    }
+    h1{
+        letter-spacing: 4px;
+        font-stretch:extra-expanded;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 50px;
+        margin-bottom: 0;
+    }
+    p{
+        font-size: 15px;
+        font: .7em sans-serif;
+        font-weight: 13px;
+        color: rgb(248, 245, 245);
+        
+    }
+    .explore-btn{
+        background-color: transparent;
+        padding: 8px 25px;
+        color: white;
+        border: 1px solid white;
+        font-size: 12px;
+        margin-top: 10px;
+        letter-spacing: 2px;
+
+    }
+
+    .about{
+        z-index: 1000px;
+        color: aquamarine;
+        justify-items: center;
+        margin-top: 100vh;
+        width: 100%;
+        height: 500px;
+        background-color: rgb(253, 249, 249);
+
+        }
+
+        .services{
+        height: 500px;
+        z-index: 1000px;
+        color: aquamarine;
+        justify-items: center;
+        margin-top: 80px;
+        }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    
+
+    .nav-new  {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 90%; /* Full width */
+        background-color: white;
+        color: black;
+        display: flex;
+        justify-content: space-between;
+        z-index: 2;
+        margin: 0;
+        padding: 0 100px; /* Adjust side padding as needed */
+    }
+.nav-new a{
+    color: black;
+}
+
+.nav-new a:hover{
+    color:aquamarine;
+    font-weight:700 ;
+
+}
+
+.side-bar{
+    
+        display: none;  /* Hidden by default */
+        
+    }
+    
+    /* Show sidebar when active */
+    .side-bar.active{
+        display: flex;
+        flex-direction:column ;
+        gap: 30px;
+        color: black;
+        background-color:white;
+        position: fixed;
+        top: 80px;
+        width: 200px;
+        right: 0px;
+        height: 100vh;
+        margin: 0;
+        z-index: 5;
+        align-items: center;
+        }
+
+        .sidebar-btn{
+            display: none;
+        }
+
+        .scrollToTop{
+            background-color: transparent;
+            color: #054e4e;
+            font-size: 30px;
+            background: none;
+            border-radius: 50%;
+            padding: 6px 12px;
+            border: 2px solid aqua; 
+            position: absolute;  
+            right: 40px;         
+            z-index: 1900;
+            
+}
+        
+    
+@media (max-width: 620px ) {
+    .nav-links {
+        display: none; /* Hide navbar */
+    }
+    .sidebar-btn{
+        display: block;
+        font-size: 30px;
+        background: none;
+        border: none;
+        color: rgb(119, 103, 103);
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1900;
+    }
+    .nav-container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 90%; /* Full width */
+        background-color: white;
+        color: black;
+        display: flex;
+        justify-content: space-between;
+        z-index: 2;
+        margin: 0;
+        padding: 0 100px; /* Adjust side padding as needed */
+   }
+    a{
+        color: black;
+        z-index: 1100;
+        
+
+    }
+    
+
+}
+    
